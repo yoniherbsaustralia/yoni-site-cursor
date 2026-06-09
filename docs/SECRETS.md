@@ -13,6 +13,14 @@ Secrets are stored in **GitHub**, not inside the repository files. That way any 
 3. Add **Repository secrets** (see table below)  
 4. Add **Repository variables** (non-secret settings)
 
+### Codespaces secrets will NOT work for deploy
+
+If you added secrets under **Codespaces** (user or org) and linked the repo there, that only applies when someone is **coding inside a Codespace**. It does **not** supply GitHub Actions when you run **Deploy to Cloudflare Production**.
+
+For deploy workflows, secrets must appear under **Settings → Secrets and variables → Actions** for this repo (repository secrets), **or** as **organization secrets** with this repo in the “Repository access” list.
+
+To verify: **Settings → Secrets and variables → Actions** should list `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID`. If the list is empty, deploy will fail with “set CLOUDFLARE_API_TOKEN”.
+
 ---
 
 ## Repository secrets
