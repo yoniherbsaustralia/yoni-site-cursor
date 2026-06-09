@@ -6,3 +6,7 @@ desktop.ini
 !.env.example
 .dev.vars
 scripts/node_modules/
+deploy/
+production-build/
+upload/
+.tmp.driveupload/
