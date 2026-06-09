@@ -162,4 +162,18 @@ These are documented so you are not surprised if you hear about them:
 
 If something in this project is confusing, note **which page or picture** you are looking at and ask your developer. You do not need to understand the technical files to give good feedback on content and design.
 
+---
+
+## Using an AI assistant (Cursor, Codex, etc.)
+
+You do **not** need to configure hosting or install anything.
+
+1. Open this project: https://github.com/yoniherbsaustralia/yoni-site-cursor  
+2. Tell the AI: **“Read AGENTS.md and follow it.”**  
+3. Describe what you want changed.  
+4. Check the **preview link** after changes: https://yoniherbsaustralia.github.io/yoni-site-cursor/  
+5. When you are happy, ask the AI to **deploy to production**.
+
+Secrets and Cloudflare access are stored in **GitHub** (set up once by your developer). See [docs/SECRETS.md](docs/SECRETS.md).
+
 **Archive backup (old files only):** https://github.com/yoniherbsaustralia/yoni-site-ag1
