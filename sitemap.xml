@@ -126,11 +126,6 @@
     <priority>0.9</priority>
   </url>
   <url>
-    <loc>https://tessabobir.com.au/hello.html</loc>
-    <changefreq>monthly</changefreq>
-    <priority>0.8</priority>
-  </url>
-  <url>
     <loc>https://tessabobir.com.au/kahuna-massage.html</loc>
     <changefreq>monthly</changefreq>
     <priority>0.9</priority>

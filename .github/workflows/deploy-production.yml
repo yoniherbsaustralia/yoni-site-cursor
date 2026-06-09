@@ -13,6 +13,9 @@ jobs:
     if: github.event.inputs.confirm == 'deploy'
     runs-on: ubuntu-latest
     name: Deploy to Cloudflare Pages
+    environment:
+      name: production
+      url: https://tessabobir.com.au
     steps:
       - name: Checkout
         uses: actions/checkout@v4

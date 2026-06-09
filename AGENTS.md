@@ -95,22 +95,19 @@ See [docs/SECRETS.md](docs/SECRETS.md) for step-by-step setup instructions for h
 
 - **Workflow file:** `.github/workflows/deploy-staging.yml`  
 - **Trigger:** Push to `main`  
-- **Target:** GitHub Pages  
+- **Target:** GitHub Pages — https://yoniherbsaustralia.github.io/yoni-site-cursor/  
+- **Approval:** None — safe to update freely for review  
 
-### Production (manual)
+### Production (manual only — never automatic)
 
 - **Workflow file:** `.github/workflows/deploy-production.yml`  
-- **Trigger:** Actions tab → “Deploy to Cloudflare Production” → Run workflow → type `deploy`  
-- **Target:** Cloudflare Pages project `yoni-site-1`  
-- **Requires:** `CLOUDFLARE_API_TOKEN` and `CLOUDFLARE_ACCOUNT_ID` secrets  
+- **Trigger:** **Manual only** — Actions → Run workflow → type `deploy`  
+- **Target:** Cloudflare Pages → tessabobir.com.au  
+- **Never** triggered by push, pull request, or merge  
 
-Agents with GitHub CLI access can run:
+There is **no GitLab** in this setup. You do **not** need pull-request approval in Git. The production gate is simply: **someone must manually start the deploy workflow** after reviewing staging.
 
-```bash
-gh workflow run deploy-production.yml -f confirm=deploy
-```
-
-Only after the user has approved going live.
+Optional later: add a GitHub **Environment** called `production` for an extra confirmation click in the Actions UI (still no second person required).
 
 ---
 

@@ -1,5 +1,6 @@
 # Exclude from Cloudflare Pages upload (not part of the public website)
 .github/
+scripts/
 docs/
 .gitignore
 AGENTS.md

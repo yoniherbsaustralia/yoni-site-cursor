@@ -83,6 +83,9 @@ If you are unsure which repo to open, **start with `yoni-site-cursor`**.
 | **Who uses it** | You, your developer, anyone reviewing | Customers, Google, social links |
 | **If something breaks** | No problem — fix it and try again | Needs fixing quickly |
 | **Hosting** | GitHub Pages — https://yoniherbsaustralia.github.io/yoni-site-cursor/ | Cloudflare + tessabobir.com.au |
+| **How it updates** | Automatically when `main` is updated | **Manual only** — run “Deploy to Cloudflare Production” and type `deploy` |
+
+You do **not** need GitLab or pull-request approval. Production always requires a deliberate manual deploy.
 
 **Helpful habit:** Always look at the **preview** link after a change and say “yes, that looks right” before publishing to the live site.
 
