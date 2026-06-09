@@ -18,8 +18,9 @@ The **public website** people visit in a browser is separate from this GitHub fo
 
 | What | Address | In plain English |
 |------|---------|------------------|
+| **Preview site (staging)** | https://yoniherbsaustralia.github.io/yoni-site-cursor/ | Test copy — updates here when we publish from GitHub |
 | **Live site (main)** | https://tessabobir.com.au | What most visitors use today |
-| **Live site (backup link)** | https://caba13f0.yoni-site-1.pages.dev | Same site, technical hosting link |
+| **Live site (backup link)** | https://caba13f0.yoni-site-1.pages.dev | Same as live, technical hosting link |
 | **Future domain** | yoniherbsaustralia.com.au | Being transferred — **not in use yet** |
 
 If the live site looks wrong, tell your developer. Do not change domain settings yourself unless you have been shown how.
@@ -81,7 +82,7 @@ If you are unsure which repo to open, **start with `yoni-site-cursor`**.
 | **Purpose** | Check changes safely | What the public sees |
 | **Who uses it** | You, your developer, anyone reviewing | Customers, Google, social links |
 | **If something breaks** | No problem — fix it and try again | Needs fixing quickly |
-| **Planned hosting** | GitHub Pages (free preview link) | Cloudflare + tessabobir.com.au |
+| **Hosting** | GitHub Pages — https://yoniherbsaustralia.github.io/yoni-site-cursor/ | Cloudflare + tessabobir.com.au |
 
 **Helpful habit:** Always look at the **preview** link after a change and say “yes, that looks right” before publishing to the live site.
 
