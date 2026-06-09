@@ -1,0 +1,6 @@
+# Exclude from Cloudflare Pages upload (not part of the public website)
+.github/
+docs/
+.gitignore
+AGENTS.md
+README.md

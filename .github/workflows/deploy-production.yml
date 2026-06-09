@@ -17,9 +17,15 @@ jobs:
       - name: Checkout
         uses: actions/checkout@v4
 
+      - name: Setup Node.js
+        uses: actions/setup-node@v4
+        with:
+          node-version: '22'
+
       - name: Deploy to Cloudflare Pages
         uses: cloudflare/wrangler-action@v3
         with:
           apiToken: ${{ secrets.CLOUDFLARE_API_TOKEN }}
           accountId: ${{ secrets.CLOUDFLARE_ACCOUNT_ID }}
-          command: pages deploy . --project-name=${{ vars.CF_PAGES_PROJECT_NAME || 'yoni-site-1' }}
+          wranglerVersion: '4'
+          command: pages deploy . --project-name=${{ vars.CF_PAGES_PROJECT_NAME || 'yoni-site-1' }} --branch=main --commit-dirty=true

@@ -46,12 +46,21 @@ Variables are visible to collaborators but are not secret — they are just conf
 
 ## Verify production deploy works
 
-1. Go to **Actions** → **Deploy to Cloudflare Production**  
-2. **Run workflow** → type `deploy` in the confirmation box  
-3. Wait ~1–2 minutes  
-4. Check https://tessabobir.com.au  
+1. Confirm **Actions secrets** exist under **Settings → Secrets and variables → Actions** (repository or org secrets with access to this repo).
+2. Go to **Actions** → **Deploy to Cloudflare Production**  
+3. **Run workflow** → type `deploy` in the confirmation box  
+4. Wait ~1–2 minutes — the run must show a **green tick** (not red).
+5. Check https://tessabobir.com.au — pages should have colours and layout (not plain black/white HTML).
 
-Staging does **not** need these secrets — it uses GitHub Pages only.
+Staging does **not** need Cloudflare secrets — it uses GitHub Pages only.
+
+### Sitemap looks “unstyled”
+
+That is **normal**. https://tessabobir.com.au/sitemap.xml is plain XML for Google — it is not meant to look like the website.
+
+### Site loads but has no styling
+
+The CSS file must be real CSS, not HTML. If production looks unstyled, re-run **Deploy to Cloudflare Production** after the latest workflow fix is on `main`. In Cloudflare → **Workers & Pages** → **yoni-site-1**, check that an old **Worker** is not overriding static files (Settings → disable SPA / remove old Worker if present).
 
 ---
 
