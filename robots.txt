@@ -1,0 +1,7 @@
+User-agent: *
+Allow: /
+
+# Exclude confirmation or internal processing pages if you don't want them indexed
+Disallow: /booking-confirmation.html
+
+Sitemap: https://tessabobir.com.au/sitemap.xml
